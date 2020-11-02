@@ -27,7 +27,7 @@ Python code should be saved in files and excuted using `python app.py`.
 <a name="layout"></a>
 ## 2. Layout
 ### Hello Dash
-![image](01_Layout\01_HelloDash.png)
+![image](01_Layout/01_HelloDash.png)
 - File: [`01_HelloDash.py`](01_Layout/01_HelloDash.py)
 - Important Notes: 
     - `children` property is always the first attribute and can be omitted. 
@@ -54,7 +54,7 @@ Python code should be saved in files and excuted using `python app.py`.
 ### Interactive Components 
 - File: [`06_Interactive.py`](01_Layout/06_Interactive.py)
 - For other components: [dash_core_components](https://dash.plotly.com/dash-core-components) 
-- Call help in python: `help(dcc.Dropdown`.
+- Call help in python: `help(dcc.Dropdown)`.
 
 ## 3. Callback
 ### Basic
