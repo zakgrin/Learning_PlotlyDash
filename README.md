@@ -29,7 +29,14 @@ Python code should be saved in files and excuted using `python app.py`.
     - `children` property is always the first attribute and can be omitted. 
         - `html.H1(children='Hello Dash')` == `html.H1('Hello Dash')`
         - it can contain: a string, a number, a signle component, or a list of components. 
-    - 
+        
+### Customized Hello Dash
+- File: [`02_CustomizedHelloDash.py`](01_Layout\02_CustomizedHelloDash.py)
+- Important Notes: 
+    - The style is added as a dictionary to `dash_html_components` 
+      (while in html, `style` is a semicolon-separated string). 
+    - Keys in `style` are camelCased (e.g. `textAlign` instead of `text_align`). 
+    - Html `class` attribute is `className` in Dash. 
     
 ## Callback
 ### Basic
