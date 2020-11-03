@@ -24,7 +24,7 @@ app.layout = html.Div([
 # App Callback (decorator):
 @app.callback(
      Output(component_id='my-output', component_property='children'),
-     [Input(component_id='my-input', component_property='value')]
+     Input(component_id='my-input', component_property='value')
 )
 # Callback Function:
 def update_output_div(input_value):
