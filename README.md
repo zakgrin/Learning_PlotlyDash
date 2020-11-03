@@ -5,8 +5,9 @@
 2. [Layout](#layout)
 
 ## Introduction
-In this repo, I share my learning for Plotly Dash which can be used to build ML/AI applications. Important notes about my
-learning will be documented here as questions. Dash [tutorial](https://dash.plotly.com/installation) is the main reference.
+In this repo, I share my learning for Plotly Dash which can be used to build ML/AI applications. Important notes are 
+documented here as questions with the tutorials files. Dash [tutorial](https://dash.plotly.com/installation) is the 
+main reference.
 
 <a name="questions"></a>
 ## 1. Questions
