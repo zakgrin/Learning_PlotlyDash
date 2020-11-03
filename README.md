@@ -125,12 +125,13 @@ Python code should be saved in files and executed using a command line:
 - For other components: [dash_core_components](https://dash.plotly.com/dash-core-components) 
 - Call help in python: `help(dcc.Dropdown)`.
 
+<a name="callback"></a>
 ## 3. Callback
 ### Basic
 - File: [`01_Callback.py`](02_Callback/01_Callback.py) 
 - Notes:
     - The "inputs" and "outputs" are described declaratively as the arguments of the @app.callback decorator.
-    - About using the `@app.callback` decorator.
+    - About using the `@app.callback` decorator:
         a. This function is called whenever the value of the "input" component (the text box) changes in order 
            to update the children of the "output" component on the page (the HTML div).
         b. You can use any name for the function that is wrapped by the @app.callback decorator.
@@ -147,3 +148,7 @@ Python code should be saved in files and executed using a command line:
       app starts, it automatically calls all of the callbacks with the initial values of the input components in order 
       to populate the initial state of the output components. In this example, if you specified something like 
       `html.Div(id='my-output', children='Hello world')`, it would get overwritten when the app starts.
+      
+### Interactive Figure
+- File: [`02_FigureWithSlider.py`](02_Callback/02_FigureWithSlider.py) 
+  
