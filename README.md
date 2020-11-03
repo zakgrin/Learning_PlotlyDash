@@ -98,14 +98,14 @@ Python code should be saved in files and executed using a command line:
 ### Hello Dash
 ![image](01_Layout/01_HelloDash.png)
 - File: [`01_HelloDash.py`](01_Layout/01_HelloDash.py)
-- Important Notes: 
+- Notes: 
     - `children` property is always the first attribute and can be omitted. 
         - `html.H1(children='Hello Dash')` == `html.H1('Hello Dash')`
         - it can contain: a string, a number, a single component, or a list of components. 
         
 ### Customized Hello Dash
 - File: [`02_CustomizedHelloDash.py`](01_Layout/02_CustomizedHelloDash.py)
-- Important Notes: 
+- Notes: 
     - The style is added as a dictionary to `dash_html_components` 
       (while in html, `style` is a semicolon-separated string). 
     - Keys in `style` are camelCased (e.g. `textAlign` instead of `text_align`). 
@@ -128,4 +128,22 @@ Python code should be saved in files and executed using a command line:
 ## 3. Callback
 ### Basic
 - File: [`01_Callback.py`](02_Callback/01_Callback.py) 
-- Notes: 
+- Notes:
+    - The "inputs" and "outputs" are described declaratively as the arguments of the @app.callback decorator.
+    - About using the `@app.callback` decorator.
+        a. This function is called whenever the value of the "input" component (the text box) changes in order 
+           to update the children of the "output" component on the page (the HTML div).
+        b. You can use any name for the function that is wrapped by the @app.callback decorator.
+        c. You can use any name for the function arguments.
+        d. You must use the same id you gave a Dash component in the app.layout when referring to it as either an input 
+           or output of the @app.callback decorator.
+        e. The @app.callback decorator needs to be directly above the callback function declaration. If there is a blank 
+           line between the decorator and the function definition, the callback registration will not be successful.
+    - Whenever an input property changes, the function that the callback decorator wraps will get called automatically.
+    - The component_id and component_property keywords are optional (not necessary!). 
+    - Don't confuse the dash.dependencies.Input object and the dash_core_components.Input object. 
+      The former is just used in these callbacks and the latter is an actual component.
+    - Notice that no value was set for the children property of the `my-output` component in the layout. When the Dash 
+      app starts, it automatically calls all of the callbacks with the initial values of the input components in order 
+      to populate the initial state of the output components. In this example, if you specified something like 
+      `html.Div(id='my-output', children='Hello world')`, it would get overwritten when the app starts.
