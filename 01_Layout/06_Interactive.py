@@ -2,19 +2,19 @@ import dash
 import dash_html_components as html
 import dash_core_components as dcc
 
-# Stylesheet
+# Stylesheet:
 stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-# App
+# App:
 app = dash.Dash(__name__, external_stylesheets=stylesheet)
 
-# Options List
+# Options List:
 options_list = [{'label': 'New York City', 'value': 'NYC'},
                 {'label': u'Montreal', 'value': 'MTL'},
                 {'label': 'San Francisco', 'value': 'SF'}
 ]
 
-# Layout
+# Layout:
 app.layout = html.Div([
                 html.Label('Dropdown'),
                 dcc.Dropdown(
@@ -51,5 +51,7 @@ app.layout = html.Div([
                 ),
 ], style={'columnCount': 2})
 
+
+# Run:
 if __name__ == '__main__':
     app.run_server(debug=True)

@@ -46,7 +46,7 @@ app.layout = html.Div([
                     ),
                 ]),
                 dcc.Graph(id='indicator-graphic'),
-                dcc.Slider(id='year--slider',
+                dcc.Slider(id='year-slider',
                            min=df['Year'].min(),
                            max=df['Year'].max(),
                            value=df['Year'].max(),
@@ -56,15 +56,18 @@ app.layout = html.Div([
              ])
 
 
+# Callback:
 @app.callback(
     Output('indicator-graphic', 'figure'),
     [Input('xaxis-column', 'value'),
      Input('yaxis-column', 'value'),
      Input('xaxis-type', 'value'),
      Input('yaxis-type', 'value'),
-     Input('year--slider', 'value')])
-def update_graph(xaxis_column_name, yaxis_column_name,
-                 xaxis_type, yaxis_type,
+     Input('year-slider', 'value')])
+def update_graph(xaxis_column_name,
+                 yaxis_column_name,
+                 xaxis_type,
+                 yaxis_type,
                  year_value):
     dff = df[df['Year'] == year_value]
 
@@ -83,5 +86,6 @@ def update_graph(xaxis_column_name, yaxis_column_name,
     return fig
 
 
+# Run:
 if __name__ == '__main__':
     app.run_server(debug=True)

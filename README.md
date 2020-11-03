@@ -1,8 +1,9 @@
 # Learning Plotly Dash
-## Table of Contents
 
+## Table of Contents
 1. [Questions](#questions)
 2. [Layout](#layout)
+3. [Callback](#callback)
 
 ## Introduction
 In this repo, I share my learning for Plotly Dash which can be used to build ML/AI applications. Important notes are 
@@ -26,8 +27,9 @@ main reference.
 (note: you can also build your own with JS and React.js). 
 
 ### What are the main parts/steps of Dash apps?
-1. Stylesheet: 
-    - `stylesheets = ['link.css'] # CSS`
+1. Stylesheet:
+    - CSS files. 
+    - `stylesheets = ['link.css'] `
 2. App: 
     - `app = dash.Dash(__name__, external_stylesheets=stylesheet)`
 3. DataFrames, dictionaries, and lists: 
@@ -149,6 +151,11 @@ Python code should be saved in files and executed using a command line:
       to populate the initial state of the output components. In this example, if you specified something like 
       `html.Div(id='my-output', children='Hello world')`, it would get overwritten when the app starts.
       
-### Interactive Figure
-- File: [`02_FigureWithSlider.py`](02_Callback/02_FigureWithSlider.py) 
+### Figure with Slider
+- File: [`02_FigureWithSlider.py`](02_Callback/02_FigureWithSlider.py)
   
+### Figure with Multiple Inputs
+- File: [`03_FigureWithMultiInputs.py`](02_Callback/03_FigureWithMultiInputs.py)
+
+### Figure with Multiple Outputs
+- File: [`04_FigureWithMultiOutput.py`](02_Callback/04_FigureWithMultiOutput.py)
